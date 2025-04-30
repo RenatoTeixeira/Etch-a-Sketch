@@ -1,0 +1,15 @@
+body {
+  background-color: grey;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 320px;
+}
+
+.container div {
+  border: 2px solid black;
+  width: 16px;
+  height: 16px;
+}
