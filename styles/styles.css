@@ -1,15 +1,24 @@
 body {
   background-color: grey;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
 }
 
 .container {
   display: flex;
   flex-wrap: wrap;
   width: 320px;
+  border: solid 3px black;
 }
 
 .container div {
-  border: 2px solid black;
   width: 16px;
   height: 16px;
+}
+
+.btn {
+  font-weight: bolder;
 }
