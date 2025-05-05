@@ -29,6 +29,7 @@ function makeGrid() {
   for (let i = 0; i < value * value; i++) {
     let size = 320 / value;
     const div = document.createElement("div");
+    let opacity = 1;
     container.append(div);
     div.style.width = `${size}px`;
     div.style.height = `${size}px`;
@@ -38,9 +39,16 @@ function makeGrid() {
       () =>
         (div.style.backgroundColor = `rgb(${randomNumber(255)}, ${randomNumber(255)}, ${randomNumber(255)})`),
     );
+    div.addEventListener("mouseover", () => (opacity = opacity - 0.1));
+    div.addEventListener("mouseover", () => (div.style.opacity = opacity));
   }
 }
 
 function randomNumber(a) {
   return Math.floor(Math.random() * a);
+}
+
+function getOpacityValue() {
+  const div = document.querySelector(".square");
+  const opacity = div.style.opacity;
 }
